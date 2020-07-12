@@ -1,0 +1,79 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.message {
+  margin: 4px 0 0;
+  width: fit-content;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message .content {
+  padding: 8px 20px;
+}
+
+/* customize local messages */
+.message.is-sender {
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+.message.is-sender .content {
+  background-color: var(--user-1);
+}
+
+.message.is-sender .dec {
+  width: 0px;
+  height: 0px;
+  content: '\00a0';
+  display: block;
+
+  border-left: 4px solid var(--user-1);
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--user-1);
+  border-bottom: 4px solid transparent;
+}
+
+.message.is-sender h4 {
+  display: none;
+}
+
+/* customize foreign messages */
+.message.normal {
+  align-self: flex-start;
+  flex-direction: row-reverse;
+}
+
+.message.normal .content {
+  background-color: var(--user-2);
+}
+
+.message.normal .dec {
+  width: 0px;
+  height: 0px;
+  content: '\00a0';
+  display: block;
+
+  border-left: 4px solid transparent;
+  border-right: 4px solid var(--user-2);
+  border-top: 4px solid var(--user-2);
+  border-bottom: 4px solid transparent;
+}
+
+/* customize two messages from the same sender */
+
+.message.descendant {
+  margin-top: 2px;
+}
+
+.message.descendant h4 {
+  display: none;
+}
+
+.message.descendant .dec {
+  opacity: 0;
+}

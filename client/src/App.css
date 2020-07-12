@@ -1,0 +1,18 @@
+.app {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: auto minmax(70%, 300px) auto;
+}
+
+.navbar {
+  background-color: var(--accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+}
+
+.container {
+  padding-top: 3rem;
+}

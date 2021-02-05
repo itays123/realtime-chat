@@ -1,5 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Components
+
+### Main Components
+- The `ChatContextProvider` component is responsible for all communications with the backend.
+- The `Wrapper` is responsible for having a responsive margin in the sides of the application.
+- The `Chat` component is respoinsible for joining the room and ordering the messages and forms inside it.
+
+### The Application Flow
+When the user enters the app, the `Chat` component outputs a name form, used for identifying the user.<br />
+Once the user enters a name and hits enter, the `ChatContext` connects to the server and outputs the messages sent and the people online., displaying them in the `Navbar` and `MessageList` component<br />
+The `MessageForm` component is responsible for collecting the user input and emit the send functionality.
+
+## Responsive Design
+
+This application uses responsive design for it's frontend. 
+The `useWindowEffect` custom hook is responsible for tracking the winfow side and is used for the scrolling down functionality, every time a new message is recieved.
+
 ## Available Scripts
 
 In the project directory, you can run:
